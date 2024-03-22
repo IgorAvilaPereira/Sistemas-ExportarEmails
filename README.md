@@ -1,6 +1,4 @@
-# ohdcasa
+# Sistemas-ExportarEmails
 
- A extensão mostra os produtos "em destaque" no site.
- 
-![](demo.gif)
+ A extensão que exporta os emails dos alunos no sistemas.ifrs 
 
