@@ -1,4 +1,5 @@
 function script() {
+// function script(area) {
   var i = 0;
   var output =  "";
   while (true) {
@@ -12,6 +13,8 @@ function script() {
   newpopupWindow = window.open('', 'pagina', "width=400 height=400");
   newpopupWindow.document.write("");
   newpopupWindow.document.write(output);  
+  // area.value = "";
+  // area.value = output;
 }
 
 // function script2() {
@@ -32,11 +35,13 @@ function script() {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#btn1").addEventListener("click", function () {
+    // var area = document.querySelector("#area");
     (async () => {
       const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        func: script
+        func: script/*,
+        args: [area]*/
       });
     })()
   });
